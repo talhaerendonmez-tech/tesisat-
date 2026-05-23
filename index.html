@@ -1,475 +1,466 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="dark">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesyonel tesisat hizmetleri, su kaçağı tespiti, tıkanıklık açma ve arıza bildirimi. 7/24 acil tesisat servisi.">
+    <meta name="keywords" content="tesisat, su kaçağı, tıkanıklık açma, doğalgaz, kombi arızası, tesisatçı, istanbul tesisatçı">
+    <meta name="author" content="Tesisat Pro">
+    <meta name="theme-color" content="#0D1B2A">
+    <title>Tesisat Pro — Arıza Tespit & Tesisat Hizmetleri</title>
 
-    <title>Yazılı Kampı — 10. Sınıf Sınav Hazırlık Platformu</title>
-    <meta name="description" content="10. Sınıf 2. dönem yazılı sınavlarına hazırlık platformu. Konu anlatımı, flashcard, mini deneme, pomodoro ve yanlış defteri ile öğrenmeyi hızlandır.">
-    <meta name="keywords" content="10. sınıf, yazılı, sınav hazırlık, flashcard, pomodoro, deneme">
-    <meta name="author" content="Eren">
-    <meta name="theme-color" content="#10B981" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#F5F7F2" media="(prefers-color-scheme: light)">
-    <meta name="color-scheme" content="dark light">
-
+    <!-- Open Graph / Sosyal Medya -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Yazılı Kampı — 10. Sınıf Sınav Hazırlık">
-    <meta property="og:description" content="Konu, flashcard, deneme ve pomodoro ile sınava hazırlan.">
+    <meta property="og:title" content="Tesisat Pro — Arıza Tespit & Tesisat Hizmetleri">
+    <meta property="og:description" content="Profesyonel tesisat hizmetleri, su kaçağı tespiti, tıkanıklık açma ve arıza bildirimi. 7/24 acil tesisat servisi.">
+    <meta property="og:url" content="https://tesisatpro.com">
+    <meta property="og:image" content="https://tesisatpro.com/images/og-image.jpg">
     <meta property="og:locale" content="tr_TR">
 
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Yazılı Kampı">
-    <meta name="twitter:description" content="10. Sınıf sınav hazırlık platformu.">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tesisat Pro — Arıza Tespit & Tesisat Hizmetleri">
+    <meta name="twitter:description" content="7/24 profesyonel tesisat hizmetleri.">
 
-    <script>
-      (function () {
-        try {
-          var t = localStorage.getItem('yk_theme');
-          if (!t) {
-            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-          }
-          document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {}
-      })();
-    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/icon.svg">
-    <link rel="apple-touch-icon" href="./assets/icons/icon.svg">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a class="skip-link" href="#main-content">İçeriğe atla</a>
 
-    <div class="blob blob-1" aria-hidden="true"></div>
-    <div class="blob blob-2" aria-hidden="true"></div>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVİGASYON -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">🔧</span>
+                <span class="logo-text">Tesisat<span class="logo-accent">Pro</span></span>
+            </a>
 
-    <button class="hamburger" id="btn-hamburger" aria-label="Menüyü aç/kapat" aria-controls="sidebar" aria-expanded="false">
-        <span></span><span></span><span></span>
-    </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Ana Sayfa</a></li>
+                <li><a href="#hizmetler" class="nav-link">Hizmetlerimiz</a></li>
+                <li><a href="#ariza" class="nav-link">Arıza Bildir</a></li>
+                <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+            </ul>
 
-    <div class="app-container">
-        <aside class="sidebar glass-card" id="sidebar" aria-label="Ana menü">
-            <div class="sidebar-top">
-                <div class="logo">KRAL<span>.</span></div>
-                <button class="icon-btn" id="btn-theme-toggle" aria-label="Temayı değiştir" title="Temayı değiştir (Ctrl+J)">
-                    <span class="theme-icon-dark">🌙</span>
-                    <span class="theme-icon-light">☀️</span>
-                </button>
-            </div>
+            <a href="#ariza" class="nav-cta">
+                <span class="cta-pulse"></span>
+                Acil Arıza
+            </a>
 
-            <nav class="nav-menu" aria-label="Sayfa gezintisi">
-                <button class="nav-item active" data-target="dashboard">📊 Dashboard</button>
-                <button class="nav-item nav-item--accent" data-target="mock-exam">📝 Deneme Sınavı</button>
-                <button class="nav-item" data-target="wrong-questions">❌ Yanlış Defteri <span class="nav-badge" id="nav-wrong-count" hidden>0</span></button>
-                <button class="nav-item" data-target="settings">⚙️ Ayarlar</button>
-
-                <div class="menu-label">DERSLER</div>
-                <div id="subject-menu" role="list"></div>
-            </nav>
-
-            <div class="user-profile">
-                <div class="avatar" id="user-avatar" aria-hidden="true">Ö</div>
-                <div class="user-info">
-                    <strong>Öğrenci</strong>
-                    <small id="user-level">Seviye 1 (0 XP)</small>
-                    <div class="level-bar" aria-hidden="true">
-                        <div class="level-bar__fill" id="level-bar-fill"></div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <main class="main-content" id="main-content">
-            <!-- Dashboard -->
-            <section id="dashboard" class="view active-view" aria-labelledby="dashboard-title">
-                <header class="top-header">
-                    <h1 id="dashboard-title">Yazılı Kampı Özeti</h1>
-                    <div class="header-actions">
-                        <div class="streak-pill glass-card" id="streak-pill" title="Günlük çalışma serin">
-                            <span aria-hidden="true">🔥</span>
-                            <strong id="streak-value">0</strong>
-                            <small>gün</small>
-                        </div>
-                        <div class="countdown glass-card">Sınavlara Kalan: <strong>14 Gün</strong></div>
-                        <button class="icon-btn" id="btn-search" aria-label="Ara (Ctrl+K)" title="Ara (Ctrl+K)">🔍</button>
-                    </div>
-                </header>
-
-                <div class="stats-grid">
-                    <div class="stat-card glass-card">
-                        <h3>Çözülen Test</h3>
-                        <div class="stat-value" id="stat-tests">0</div>
-                    </div>
-                    <div class="stat-card glass-card">
-                        <h3>Öğrenilen Kart</h3>
-                        <div class="stat-value" id="stat-flashcards">0</div>
-                    </div>
-                    <div class="stat-card glass-card">
-                        <h3>Toplam XP</h3>
-                        <div class="stat-value" id="stat-score">0</div>
-                    </div>
-                </div>
-
-                <div class="glass-card mt-2 goal-card">
-                    <div class="goal-card__header">
-                        <h2>🎯 Bugünün Hedefi</h2>
-                        <button class="btn-secondary btn-sm" id="btn-edit-goal">Düzenle</button>
-                    </div>
-                    <div class="goal-card__body">
-                        <div class="goal-progress-info">
-                            <span><strong id="goal-progress">0</strong> / <span id="goal-target">30</span> soru</span>
-                            <span class="goal-percent" id="goal-percent">%0</span>
-                        </div>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar progress-bar--goal" id="goal-bar"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pomodoro-chart-grid mt-2">
-                    <div class="glass-card pomodoro-card">
-                        <h2>⏱️ Pomodoro Sayacı</h2>
-                        <div class="timer-display" id="pomodoro-time" aria-live="polite">25:00</div>
-                        <div class="timer-status" id="pomodoro-status">Odaklanma Vakti!</div>
-                        <div class="timer-controls">
-                            <button class="btn-primary" id="btn-pomodoro-start">Başlat</button>
-                            <button class="btn-secondary" id="btn-pomodoro-reset">Sıfırla</button>
-                        </div>
-                    </div>
-
-                    <div class="glass-card chart-card">
-                        <h2>📈 Başarı Analizi</h2>
-                        <div class="chart-wrapper">
-                            <canvas id="successChart" aria-label="Derslerdeki ilerleme radar grafiği" role="img"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card mt-2">
-                    <h2>📅 Son 12 Hafta Aktiviten</h2>
-                    <div class="heatmap" id="activity-heatmap" aria-label="Haftalık aktivite ısı haritası"></div>
-                    <div class="heatmap-legend">
-                        <span>Az</span>
-                        <span class="heatmap-cell" data-level="0"></span>
-                        <span class="heatmap-cell" data-level="1"></span>
-                        <span class="heatmap-cell" data-level="2"></span>
-                        <span class="heatmap-cell" data-level="3"></span>
-                        <span class="heatmap-cell" data-level="4"></span>
-                        <span>Çok</span>
-                    </div>
-                </div>
-
-                <div class="glass-card mt-2">
-                    <h2>🏆 Kazanılan Rozetler</h2>
-                    <div class="badges-container" id="badges-container">
-                        <span class="muted-text">Henüz rozet kazanılmadı. Bol şans!</span>
-                    </div>
-                </div>
-
-                <div class="glass-card mt-2">
-                    <h2>Derslerdeki İlerlemen</h2>
-                    <div class="progress-list" id="progress-list"></div>
-                </div>
-            </section>
-
-            <!-- Subject -->
-            <section id="subject-view" class="view" aria-labelledby="subject-title">
-                <header class="top-header">
-                    <h1 id="subject-title">Ders Adı</h1>
-                    <button class="btn-secondary" data-action="back-dashboard">Geri Dön</button>
-                </header>
-
-                <div class="subject-tabs" role="tablist">
-                    <button class="tab-btn active" data-tab="konu" role="tab" aria-selected="true">📖 Konu Anlatımı</button>
-                    <button class="tab-btn" data-tab="flashcard" role="tab" aria-selected="false">🎴 Flashcards</button>
-                    <button class="tab-btn" data-tab="quiz" role="tab" aria-selected="false">📝 Mini Deneme</button>
-                    <button class="tab-btn" data-tab="notes" role="tab" aria-selected="false">📝 Notlarım</button>
-                </div>
-
-                <div class="tab-content active-tab" id="tab-konu" role="tabpanel">
-                    <div class="glass-card markdown-body" id="konu-content"></div>
-                </div>
-
-                <div class="tab-content" id="tab-flashcard" role="tabpanel">
-                    <div class="flashcard-container">
-                        <button class="flashcard" id="current-flashcard" data-action="flip-card" aria-label="Flashcard'ı çevir (Space)">
-                            <div class="card-inner" id="flashcard-inner">
-                                <div class="card-front" id="flashcard-q">Soru</div>
-                                <div class="card-back" id="flashcard-a">Cevap</div>
-                            </div>
-                        </button>
-                        <div class="flashcard-controls">
-                            <button class="btn-secondary" data-action="prev-card" aria-label="Önceki kart (Sol ok)">◀ Önceki</button>
-                            <span id="flashcard-counter">1 / 5</span>
-                            <button class="icon-btn" data-action="speak-card" aria-label="Sesli oku" title="Sesli oku (S)">🔊</button>
-                            <button class="btn-primary" data-action="next-card" aria-label="Sonraki kart (Sağ ok)">Sonraki ▶</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="tab-quiz" role="tabpanel">
-                    <div class="glass-card quiz-card" id="quiz-container">
-                        <h3 id="quiz-q">Soru buraya gelecek?</h3>
-                        <div class="options" id="quiz-options" role="radiogroup" aria-label="Cevap seçenekleri"></div>
-                        <div class="quiz-footer">
-                            <button class="btn-primary mt-2 hidden" data-action="next-question" id="btn-next-q">Sonraki Soru</button>
-                        </div>
-                    </div>
-                    <div class="glass-card hidden quiz-result-card" id="quiz-result">
-                        <h3>Test Tamamlandı!</h3>
-                        <h1 id="quiz-score" class="highlight">100</h1>
-                        <button class="btn-primary mt-2" data-action="back-dashboard">Ana Ekrana Dön</button>
-                    </div>
-                </div>
-
-                <div class="tab-content" id="tab-notes" role="tabpanel">
-                    <div class="glass-card">
-                        <h2>📝 Bu Ders İçin Notlarım</h2>
-                        <p class="muted-text small">Otomatik kaydedilir. Sadece bu cihazda saklanır.</p>
-                        <textarea id="subject-notes" class="notes-textarea" rows="14" placeholder="Bu derse dair notlarını buraya yazabilirsin..."></textarea>
-                        <div class="notes-meta">
-                            <span id="notes-status" class="muted-text small">Hazır</span>
-                            <span id="notes-count" class="muted-text small">0 karakter</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Mock -->
-            <section id="mock-exam" class="view" aria-labelledby="mock-title">
-                <header class="top-header">
-                    <h1 id="mock-title">Genel Deneme Sınavı</h1>
-                    <button class="btn-secondary" data-action="back-dashboard">Vazgeç</button>
-                </header>
-
-                <div class="glass-card" id="mock-intro">
-                    <h2>Gerçek Sınav Simülasyonu</h2>
-                    <p class="mock-desc">Tüm derslerden karma sorular içeren bu deneme sınavı ile seviyeni test et. Süre: 10 Dakika.</p>
-                    <button class="btn-primary btn-gradient" data-action="start-mock">Sınavı Başlat</button>
-                </div>
-
-                <div class="hidden" id="mock-quiz-area">
-                    <div class="glass-card quiz-card">
-                        <div class="mock-meta">
-                            <span id="mock-timer" aria-live="polite">10:00</span>
-                            <span id="mock-progress">1/10</span>
-                        </div>
-                        <h3 id="mock-q">Soru buraya gelecek?</h3>
-                        <div class="options" id="mock-options" role="radiogroup"></div>
-                        <div class="quiz-footer">
-                            <button class="btn-primary mt-2 hidden" data-action="next-mock-question" id="btn-next-mock-q">Sonraki Soru</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass-card hidden quiz-result-card" id="mock-result">
-                    <h3>Sınav Sonucu</h3>
-                    <h1 id="mock-score" class="highlight mock-score">100</h1>
-                    <p id="mock-feedback" class="muted-text"></p>
-                    <button class="btn-primary" data-action="back-dashboard">Ana Ekrana Dön</button>
-                </div>
-            </section>
-
-            <!-- Wrong Questions -->
-            <section id="wrong-questions" class="view" aria-labelledby="wrong-title">
-                <header class="top-header">
-                    <h1 id="wrong-title">❌ Yanlış Sorular Defteri</h1>
-                    <button class="btn-secondary" data-action="back-dashboard">Geri Dön</button>
-                </header>
-                <div class="glass-card">
-                    <div class="wrong-toolbar">
-                        <select id="wrong-filter" class="select" aria-label="Derse göre filtrele">
-                            <option value="all">Tüm Dersler</option>
-                        </select>
-                        <button class="btn-secondary btn-sm" id="btn-clear-wrong">Defteri Temizle</button>
-                    </div>
-                    <div id="wrong-list" class="wrong-list">
-                        <p class="muted-text">Henüz yanlış cevaplanmış soru yok. 🎉</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Settings -->
-            <section id="settings" class="view" aria-labelledby="settings-title">
-                <header class="top-header">
-                    <h1 id="settings-title">⚙️ Ayarlar</h1>
-                    <button class="btn-secondary" data-action="back-dashboard">Geri Dön</button>
-                </header>
-
-                <div class="glass-card">
-                    <h2>Veri Yönetimi</h2>
-                    <p class="muted-text">İlerlemeni JSON olarak yedekle veya başka bir cihazdan içe aktar.</p>
-                    <div class="settings-row">
-                        <button class="btn-primary" id="btn-export">📤 İlerlemeyi Dışa Aktar</button>
-                        <label class="btn-secondary file-label">
-                            📥 İçe Aktar
-                            <input type="file" id="import-file" accept="application/json" hidden>
-                        </label>
-                        <button class="btn-secondary danger" id="btn-reset">🗑️ Tüm Veriyi Sıfırla</button>
-                    </div>
-                </div>
-
-                <div class="glass-card mt-2">
-                    <h2>Bildirimler</h2>
-                    <label class="toggle-row">
-                        <input type="checkbox" id="toggle-notifications">
-                        <span>Pomodoro tamamlandığında bildirim göster</span>
-                    </label>
-                    <label class="toggle-row">
-                        <input type="checkbox" id="toggle-sound">
-                        <span>Ses uyarısı (kısa zil)</span>
-                    </label>
-                </div>
-
-                <div class="glass-card mt-2 ai-settings">
-                    <h2>🤖 Yapay Zeka Bağlantısı</h2>
-                    <p class="muted-text">Asistana gerçek AI gücü vermek için ücretsiz bir API anahtarı bağla. Anahtar sadece bu cihazda saklanır.</p>
-
-                    <label class="ai-row">
-                        <span>Sağlayıcı</span>
-                        <select id="ai-provider" class="select">
-                            <option value="">Yok (yalnız yerel arama)</option>
-                            <option value="gemini">Google Gemini Flash · Ücretsiz</option>
-                            <option value="groq">Groq Llama 3.3 · Ücretsiz, Hızlı</option>
-                        </select>
-                    </label>
-
-                    <label class="ai-row">
-                        <span>API Anahtarı</span>
-                        <input type="password" id="ai-key" class="text-input" placeholder="Buraya yapıştır" autocomplete="off">
-                    </label>
-
-                    <div class="settings-row">
-                        <button class="btn-primary" id="btn-save-ai">💾 Kaydet</button>
-                        <button class="btn-secondary" id="btn-test-ai">🧪 Bağlantıyı Test Et</button>
-                    </div>
-
-                    <details class="ai-help">
-                        <summary>📌 Anahtar nasıl alınır? (1 dakika)</summary>
-                        <div class="ai-help-body">
-                            <strong>Gemini için:</strong>
-                            <ol>
-                                <li><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> adresine git</li>
-                                <li>Google hesabınla gir → <em>Create API Key</em>'e tıkla</li>
-                                <li>Çıkan uzun anahtarı buraya yapıştır</li>
-                            </ol>
-                            <strong>Groq için:</strong>
-                            <ol>
-                                <li><a href="https://console.groq.com/keys" target="_blank" rel="noopener">console.groq.com/keys</a> adresine git</li>
-                                <li>Hesap aç (ücretsiz) → <em>Create API Key</em>'e tıkla</li>
-                                <li>Anahtarı buraya yapıştır</li>
-                            </ol>
-                            <p class="muted-text small">İkisi de <strong>kredi kartı istemez</strong> ve günlük cömert ücretsiz limitleri vardır. Anahtarın gizli kalması için kimseyle paylaşma.</p>
-                        </div>
-                    </details>
-                </div>
-
-                <div class="glass-card mt-2">
-                    <h2>Klavye Kısayolları</h2>
-                    <ul class="kbd-list">
-                        <li><kbd>Ctrl</kbd> + <kbd>K</kbd> — Genel arama</li>
-                        <li><kbd>Ctrl</kbd> + <kbd>J</kbd> — Tema değiştir</li>
-                        <li><kbd>Space</kbd> — Flashcard çevir</li>
-                        <li><kbd>←</kbd> / <kbd>→</kbd> — Önceki / sonraki kart</li>
-                        <li><kbd>S</kbd> — Flashcard'ı sesli oku</li>
-                        <li><kbd>1</kbd>–<kbd>4</kbd> — Quiz seçeneği seç</li>
-                        <li><kbd>Esc</kbd> — Açık modal/menüyü kapat</li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- Search Modal -->
-    <div class="modal-overlay hidden" id="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-label">
-        <div class="modal search-modal">
-            <label class="search-input-wrap">
-                <span class="visually-hidden" id="search-label">Genel arama</span>
-                <span aria-hidden="true">🔍</span>
-                <input type="text" id="search-input" placeholder="Konu, flashcard veya soru ara..." autocomplete="off">
-                <kbd>Esc</kbd>
-            </label>
-            <div class="search-results" id="search-results" role="listbox"></div>
-        </div>
-    </div>
-
-    <!-- Goal Modal -->
-    <div class="modal-overlay hidden" id="goal-modal" role="dialog" aria-modal="true" aria-labelledby="goal-modal-title">
-        <div class="modal">
-            <h2 id="goal-modal-title">🎯 Günlük Hedefini Belirle</h2>
-            <p class="muted-text">Bugün kaç soru çözmek istiyorsun?</p>
-            <input type="number" id="goal-input" min="1" max="500" value="30" class="text-input">
-            <div class="modal-actions">
-                <button class="btn-secondary" data-action="close-modal">Vazgeç</button>
-                <button class="btn-primary" id="btn-save-goal">Kaydet</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Confirm Modal -->
-    <div class="modal-overlay hidden" id="confirm-modal" role="alertdialog" aria-modal="true" aria-labelledby="confirm-title">
-        <div class="modal">
-            <h2 id="confirm-title">Emin misin?</h2>
-            <p id="confirm-message" class="muted-text">Bu işlem geri alınamaz.</p>
-            <div class="modal-actions">
-                <button class="btn-secondary" data-action="close-modal">Vazgeç</button>
-                <button class="btn-primary danger" id="btn-confirm-yes">Evet, devam et</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
-
-    <!-- Seçim sonrası "Soru Sor" balonu -->
-    <button class="ask-bubble hidden" id="ask-bubble" aria-label="Seçili metin için soru sor">
-        🦉 Soru Sor
-    </button>
-
-    <!-- ╔══════ Asistan (Çaylak Yardımcı) ══════╗ -->
-    <button class="assistant-fab" id="assistant-fab" aria-label="Yardımcıyı aç" title="Çaylak Yardımcı">
-        <span class="assistant-fab__pulse" aria-hidden="true"></span>
-        <span class="assistant-fab__icon">🦉</span>
-    </button>
-
-    <aside class="assistant-panel hidden" id="assistant-panel" role="dialog" aria-modal="false" aria-labelledby="assistant-title">
-        <header class="assistant-header">
-            <div class="assistant-brand">
-                <span class="assistant-brand__icon">🦉</span>
-                <div>
-                    <strong id="assistant-title">Çaylak Yardımcı</strong>
-                    <small>Tüm derslerine hakim · saniyede cevap</small>
-                </div>
-            </div>
-            <button class="icon-btn" id="assistant-close" aria-label="Kapat">✕</button>
-        </header>
-
-        <div class="assistant-messages" id="assistant-messages" aria-live="polite"></div>
-
-        <div class="assistant-suggestions" id="assistant-suggestions">
-            <button class="chip" data-prompt="Polinom nedir?">Polinom nedir?</button>
-            <button class="chip" data-prompt="Mohaç Savaşı ne zaman oldu?">Mohaç Savaşı</button>
-            <button class="chip" data-prompt="Coulomb yasasını anlat">Coulomb yasası</button>
-            <button class="chip" data-prompt="Mendel genetiği örnek ver">Mendel</button>
-            <button class="chip" data-prompt="Hangi dersler var?">Hangi dersler var?</button>
-        </div>
-
-        <form class="assistant-input" id="assistant-form">
-            <input type="text" id="assistant-input" placeholder="Bir şey sor..." autocomplete="off" maxlength="500">
-            <button class="btn-primary" type="submit" aria-label="Gönder">
-                <span aria-hidden="true">➤</span>
+            <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-        </form>
-    </aside>
+        </div>
+    </nav>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BÖLÜM 1: HERO -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="hero" class="hero-section">
+        <!-- Animasyonlu arka plan parçacıkları -->
+        <div class="hero-particles">
+            <div class="particle drop" style="--x: 10%; --delay: 0s;"></div>
+            <div class="particle drop" style="--x: 25%; --delay: 1.2s;"></div>
+            <div class="particle drop" style="--x: 45%; --delay: 0.6s;"></div>
+            <div class="particle drop" style="--x: 65%; --delay: 1.8s;"></div>
+            <div class="particle drop" style="--x: 80%; --delay: 0.3s;"></div>
+            <div class="particle drop" style="--x: 92%; --delay: 2.1s;"></div>
+        </div>
+
+        <!-- Dekoratif boru hattı çizgisi -->
+        <div class="hero-pipe-line"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">🛡️ 7/24 Acil Servis</div>
+            <h1 class="hero-title">
+                Profesyonel <span class="text-gradient">Tesisat</span><br>
+                Arıza Tespit & Onarım
+            </h1>
+            <p class="hero-subtitle">
+                Su kaçağı, tıkanıklık, doğalgaz ve kombi arızalarınız için 
+                uzman ekibimizle yanınızdayız. Hızlı teşhis, güvenilir çözüm.
+            </p>
+            <div class="hero-actions">
+                <a href="#ariza" class="btn btn-primary">
+                    <span class="btn-icon">📋</span>
+                    Arıza Bildir
+                </a>
+                <a href="tel:+905551234567" class="btn btn-outline">
+                    <span class="btn-icon">📞</span>
+                    Hemen Ara
+                </a>
+            </div>
+        </div>
+
+        <!-- İstatistik Sayaçları -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-target="1500">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Mutlu Müşteri</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="10">0</span>
+                <span class="stat-suffix">Yıl</span>
+                <span class="stat-label">Deneyim</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="24">0</span>
+                <span class="stat-suffix">/7</span>
+                <span class="stat-label">Hizmet</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="98">0</span>
+                <span class="stat-suffix">%</span>
+                <span class="stat-label">Memnuniyet</span>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+            <span>Aşağı Kaydır</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BÖLÜM 2: HİZMETLERİMİZ -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="hizmetler" class="section hizmetler-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ne Yapıyoruz?</span>
+                <h2 class="section-title">Hizmetlerimiz</h2>
+                <p class="section-desc">Her türlü tesisat sorununa profesyonel ve hızlı çözümler sunuyoruz.</p>
+            </div>
+
+            <div class="hizmet-grid">
+                <!-- Kart 1 -->
+                <div class="hizmet-card" data-aos="fade-up">
+                    <div class="hizmet-icon">💧</div>
+                    <h3 class="hizmet-title">Su Kaçağı Tespiti</h3>
+                    <p class="hizmet-desc">Kameralı ve termal cihazlarla kırıp dökmeden su kaçağı noktasını tespit ediyoruz.</p>
+                    <div class="hizmet-tag">Popüler</div>
+                </div>
+
+                <!-- Kart 2 -->
+                <div class="hizmet-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hizmet-icon">🚽</div>
+                    <h3 class="hizmet-title">Tıkanıklık Açma</h3>
+                    <p class="hizmet-desc">Lavabo, tuvalet, gider ve kanalizasyon tıkanıklıklarını açma hizmeti.</p>
+                </div>
+
+                <!-- Kart 3 -->
+                <div class="hizmet-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="hizmet-icon">🔥</div>
+                    <h3 class="hizmet-title">Doğalgaz Tesisatı</h3>
+                    <p class="hizmet-desc">Doğalgaz hattı döşeme, kaçak kontrolü ve onaylı gaz tesisatı hizmetleri.</p>
+                </div>
+
+                <!-- Kart 4 -->
+                <div class="hizmet-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="hizmet-icon">❄️</div>
+                    <h3 class="hizmet-title">Kombi & Kalorifer</h3>
+                    <p class="hizmet-desc">Kombi bakım, onarım, kalorifer petek temizliği ve ısıtma sistemi kurulumu.</p>
+                </div>
+
+                <!-- Kart 5 -->
+                <div class="hizmet-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="hizmet-icon">🚿</div>
+                    <h3 class="hizmet-title">Su Tesisatı</h3>
+                    <p class="hizmet-desc">Temiz su ve pis su tesisatı döşeme, tamir ve yenileme işlemleri.</p>
+                </div>
+
+                <!-- Kart 6 -->
+                <div class="hizmet-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="hizmet-icon">🛁</div>
+                    <h3 class="hizmet-title">Banyo & Mutfak Tadilat</h3>
+                    <p class="hizmet-desc">Banyo ve mutfak tesisat yenileme, tadilat ve dekorasyon projeleri.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BÖLÜM 3: ARIZA BİLDİR -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="ariza" class="section ariza-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Hızlı Çözüm</span>
+                <h2 class="section-title">Arıza Bildir</h2>
+                <p class="section-desc">Formu doldurun, en kısa sürede ekibimiz sizinle iletişime geçsin.</p>
+            </div>
+
+            <div class="ariza-wrapper">
+                <!-- Sol: Arıza Bildirim Formu -->
+                <form id="arizaForm" class="ariza-form glass-card" novalidate>
+                    <input type="hidden" name="csrf_token" id="csrfToken">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adSoyad">Ad Soyad <span class="required">*</span></label>
+                            <input type="text" id="adSoyad" name="ad_soyad" placeholder="Adınız ve soyadınız" required>
+                            <span class="form-error" id="adSoyadError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon <span class="required">*</span></label>
+                            <input type="tel" id="telefon" name="telefon" placeholder="0(5XX) XXX XX XX" required>
+                            <span class="form-error" id="telefonError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" placeholder="ornek@mail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="ilce">İlçe <span class="required">*</span></label>
+                            <input type="text" id="ilce" name="ilce" placeholder="İlçe adı" required>
+                            <span class="form-error" id="ilceError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adres">Adres <span class="required">*</span></label>
+                        <input type="text" id="adres" name="adres" placeholder="Mahalle, sokak, bina no, daire no" required>
+                        <span class="form-error" id="adresError"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="arizaTuru">Arıza Türü <span class="required">*</span></label>
+                            <select id="arizaTuru" name="ariza_turu" required>
+                                <option value="">Seçiniz...</option>
+                                <option value="su_kacagi">💧 Su Kaçağı</option>
+                                <option value="tikaniklik">🚽 Tıkanıklık</option>
+                                <option value="dogalgaz">🔥 Doğalgaz Arızası</option>
+                                <option value="kombi">❄️ Kombi Arızası</option>
+                                <option value="diger">🔧 Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="aciliyet">Aciliyet <span class="required">*</span></label>
+                            <select id="aciliyet" name="aciliyet" required>
+                                <option value="normal">🟢 Normal</option>
+                                <option value="acil">🟠 Acil</option>
+                                <option value="cok_acil">🔴 Çok Acil</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="aciklama">Arıza Açıklaması</label>
+                        <textarea id="aciklama" name="aciklama" rows="4" placeholder="Arızanızı kısaca açıklayın..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full" id="arizaSubmitBtn">
+                        <span class="btn-icon">📤</span>
+                        Arıza Bildir
+                    </button>
+                </form>
+
+                <!-- Sağ: Takip Sorgulama + Bilgi -->
+                <div class="ariza-sidebar">
+                    <!-- Takip Sorgulama Kutusu -->
+                    <div class="takip-box glass-card">
+                        <h3>📍 Arıza Takip</h3>
+                        <p>Daha önce bildirdiğiniz arızanın durumunu sorgulayın.</p>
+                        <div class="form-group">
+                            <input type="text" id="takipNo" placeholder="ARZ-2026-XXXXX">
+                        </div>
+                        <button class="btn btn-outline btn-full" id="takipSorgulaBtn">
+                            Sorgula
+                        </button>
+                        <div id="takipSonuc" class="takip-sonuc hidden"></div>
+                    </div>
+
+                    <!-- Bilgi Kutusu -->
+                    <div class="info-box glass-card">
+                        <h3>📞 Acil Durumlar İçin</h3>
+                        <p>Acil tesisat arızalarında bizi doğrudan arayabilirsiniz:</p>
+                        <a href="tel:+905551234567" class="acil-tel">0 (555) 123 45 67</a>
+                        <div class="calisma-saatleri">
+                            <div class="saat-row">
+                                <span>Hafta içi</span>
+                                <span>08:00 — 22:00</span>
+                            </div>
+                            <div class="saat-row">
+                                <span>Hafta sonu</span>
+                                <span>09:00 — 20:00</span>
+                            </div>
+                            <div class="saat-row acil-row">
+                                <span>Acil servis</span>
+                                <span>7/24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- BÖLÜM 4: HAKKIMIZDA & İLETİŞİM -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="iletisim" class="section iletisim-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Bize Ulaşın</span>
+                <h2 class="section-title">Hakkımızda & İletişim</h2>
+                <p class="section-desc">10 yılı aşkın tecrübemizle güvenilir tesisat çözümleri sunuyoruz.</p>
+            </div>
+
+            <div class="iletisim-grid">
+                <!-- Sol: Hakkımızda + Neden Biz -->
+                <div class="hakkimizda-content">
+                    <div class="hakkimizda-text glass-card">
+                        <h3>🏢 Hakkımızda</h3>
+                        <p>
+                            Tesisat Pro olarak 10 yılı aşan sektör deneyimimizle İstanbul genelinde
+                            su tesisatı, doğalgaz, kalorifer ve her türlü tesisat arıza hizmetini 
+                            profesyonel ekibimizle sunuyoruz. Müşteri memnuniyeti ve kaliteli 
+                            işçilik bizim önceliğimizdir.
+                        </p>
+                    </div>
+
+                    <div class="neden-biz glass-card">
+                        <h3>✅ Neden Biz?</h3>
+                        <ul class="neden-list">
+                            <li>
+                                <span class="neden-icon">⚡</span>
+                                <div>
+                                    <strong>Hızlı Müdahale</strong>
+                                    <p>En geç 1 saat içinde adresinizde</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="neden-icon">🛡️</span>
+                                <div>
+                                    <strong>Garantili İşçilik</strong>
+                                    <p>Tüm işlerimize 2 yıl garanti</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="neden-icon">💰</span>
+                                <div>
+                                    <strong>Uygun Fiyat</strong>
+                                    <p>Piyasa ortalamasının altında fiyatlar</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="neden-icon">📜</span>
+                                <div>
+                                    <strong>Lisanslı & Sigortalı</strong>
+                                    <p>Tüm yasal belge ve sigortalar mevcut</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sağ: İletişim Formu + Bilgiler -->
+                <div class="iletisim-content">
+                    <form id="iletisimForm" class="iletisim-form glass-card" novalidate>
+                        <h3>✉️ Mesaj Gönderin</h3>
+                        <div class="form-group">
+                            <label for="iletisimAd">Ad Soyad</label>
+                            <input type="text" id="iletisimAd" name="ad_soyad" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="iletisimTel">Telefon</label>
+                            <input type="tel" id="iletisimTel" name="telefon" placeholder="0(5XX) XXX XX XX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="iletisimMesaj">Mesajınız</label>
+                            <textarea id="iletisimMesaj" name="mesaj" rows="4" placeholder="Mesajınızı yazın..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-icon">📨</span>
+                            Gönder
+                        </button>
+                    </form>
+
+                    <div class="iletisim-bilgi glass-card">
+                        <div class="bilgi-item">
+                            <span class="bilgi-icon">📍</span>
+                            <div>
+                                <strong>Adres</strong>
+                                <p>İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                        <div class="bilgi-item">
+                            <span class="bilgi-icon">📞</span>
+                            <div>
+                                <strong>Telefon</strong>
+                                <p>0 (555) 123 45 67</p>
+                            </div>
+                        </div>
+                        <div class="bilgi-item">
+                            <span class="bilgi-icon">📧</span>
+                            <div>
+                                <strong>E-posta</strong>
+                                <p>info@tesisatpro.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-icon">🔧</span>
+                    <span class="logo-text">Tesisat<span class="logo-accent">Pro</span></span>
+                    <p>Profesyonel tesisat çözümleri, güvenilir hizmet.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Ana Sayfa</a>
+                    <a href="#hizmetler">Hizmetler</a>
+                    <a href="#ariza">Arıza Bildir</a>
+                    <a href="#iletisim">İletişim</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tesisat Pro. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Başarı Modalı -->
+    <div id="basariModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <div class="modal-icon">✅</div>
+            <h3>Arıza Bildiriminiz Alındı!</h3>
+            <p>Takip Numaranız:</p>
+            <div class="takip-numara" id="modalTakipNo">ARZ-2026-XXXXX</div>
+            <p class="modal-note">Bu numarayı saklayarak arızanızın durumunu takip edebilirsiniz.</p>
+            <button class="btn btn-primary" id="modalKapat">Tamam</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>
