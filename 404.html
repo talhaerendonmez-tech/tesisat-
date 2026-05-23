@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Sayfa Bulunamadı | Tesisat Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0D1B2A;
+            color: #E0E0E0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Arka plan parçacıkları */
+        .bg-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .bg-orb-1 {
+            width: 400px; height: 400px;
+            background: #1E90FF;
+            top: -100px; left: -100px;
+            animation: orbFloat 8s ease-in-out infinite;
+        }
+        .bg-orb-2 {
+            width: 300px; height: 300px;
+            background: #00CED1;
+            bottom: -80px; right: -80px;
+            animation: orbFloat 10s ease-in-out infinite reverse;
+        }
+        .bg-orb-3 {
+            width: 200px; height: 200px;
+            background: #FF6B35;
+            top: 50%; right: 20%;
+            animation: orbFloat 12s ease-in-out infinite 2s;
+        }
+
+        @keyframes orbFloat {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(30px, -20px); }
+            50% { transform: translate(-20px, 30px); }
+            75% { transform: translate(20px, 20px); }
+        }
+
+        .error-container {
+            text-align: center;
+            z-index: 1;
+            padding: 40px;
+        }
+
+        .error-code {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(8rem, 20vw, 14rem);
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #1E90FF, #00CED1, #1E90FF);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite, floatUp 3s ease-in-out infinite;
+            margin-bottom: 16px;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes floatUp {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .error-pipe {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .pipe-line {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #1E90FF, transparent);
+            border-radius: 2px;
+        }
+
+        .pipe-icon {
+            font-size: 28px;
+            animation: drip 2s ease-in-out infinite;
+        }
+
+        @keyframes drip {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        .error-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .error-desc {
+            font-size: 16px;
+            color: #8899AA;
+            max-width: 420px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1E90FF, #00CED1);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .error-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(30, 144, 255, 0.3);
+        }
+
+        .error-btn span {
+            font-size: 18px;
+        }
+
+        .error-footer {
+            margin-top: 48px;
+            font-size: 13px;
+            color: #556677;
+        }
+
+        .error-footer a {
+            color: #1E90FF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .error-footer a:hover {
+            color: #00CED1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+
+        <div class="error-pipe">
+            <div class="pipe-line"></div>
+            <span class="pipe-icon">🔧</span>
+            <div class="pipe-line"></div>
+        </div>
+
+        <h1 class="error-title">Sayfa Bulunamadı</h1>
+        <p class="error-desc">
+            Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir. 
+            Endişelenmeyin, sizi ana sayfaya yönlendirelim.
+        </p>
+
+        <a href="/" class="error-btn">
+            <span>🏠</span>
+            Ana Sayfaya Dön
+        </a>
+
+        <div class="error-footer">
+            <p>Yardıma mı ihtiyacınız var? <a href="tel:+905551234567">0 (555) 123 45 67</a></p>
+        </div>
+    </div>
+</body>
+</html>

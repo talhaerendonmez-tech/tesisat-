@@ -1,0 +1,15 @@
+# ══════════════════════════════════════════
+# TESISAT PRO — ROBOTS.TXT
+# ══════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# Hassas dizinleri engelle
+Disallow: /api/
+Disallow: /config/
+Disallow: /admin/
+Disallow: /sql/
+
+# Site Haritası
+Sitemap: https://tesisatpro.com/sitemap.xml
